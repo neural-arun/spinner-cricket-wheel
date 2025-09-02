@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinner Cricket Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Spinner Cricket Pro 🏏</h1>
+    </header>
+
+    <main>
+        <div class="scoreboard">
+            <div class="player-panel active-player" id="player1-panel">
+                <h2>Player 1</h2>
+                <p class="score" id="player1-score">0</p>
+                <p class="wickets">Wickets: <span id="player1-wickets">0</span></p>
+            </div>
+            <div class="player-panel" id="player2-panel">
+                <h2>Player 2</h2>
+                <p class="score" id="player2-score">0</p>
+                <p class="wickets">Wickets: <span id="player2-wickets">0</span></p>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="spinner-container">
+                <div class="pointer"></div>
+                <div class="spinner" id="spinner">
+                    </div>
+            </div>
+            <button id="spin-button">Spin</button>
+        </div>
+        
+        <div class="status-container">
+            <h3 id="game-status">Player 1's Turn</h3>
+            <p id="result-display"></p> </div>
+
+        <div id="game-over-modal" class="modal-hidden">
+            <div class="modal-content">
+                <h2 id="modal-title">Game Over!</h2>
+                <p id="modal-text">Player X Wins!</p>
+                <button id="restart-button">Play Again</button>
+            </div>
+        </div>
+
+    </main>
+    <audio id="spin-sound" src="sounds/spin.mp3" preload="auto"></audio>
+    <audio id="wicket-sound" src="sounds/wicket.mp3" preload="auto"></audio>
+    <audio id="boundary-sound" src="sounds/boundary.mp3" preload="auto"></audio>
+    <audio id="game-over-sound" src="sounds/game-over.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
